@@ -1,0 +1,29 @@
+body {
+    background-color: #000;
+}
+
+.container{
+    display: flex;
+    background-color: rgba(0, 0, 0, 0); /* Fundo totalmente transparente */
+    width: 100%;
+}
+
+.container .logo {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0); /* Fundo totalmente transparente */
+    width: 10%;
+    padding: 16px ;
+    justify-content: center;
+}
+
+.container .titulo_navegador{
+    display: flex;
+    background-color: rgba(0, 0, 0, 0); /* Fundo totalmente transparente */
+    width: 90%;
+    padding: 16px;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: var(--font-heading);
+    color: var(--cor-primaria);
+}
+
