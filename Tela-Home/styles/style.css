@@ -1,25 +1,28 @@
 body {
-    background-color: #000;
+    background-image: url('https://wallpaper.forfun.com/fetch/8b/8b29f499a2564a8cb43e1877bba4da47.jpeg');
+    display:flex;
+    justify-content: space-between;
 }
 
 .container{
+    width: 50%;
     display: flex;
+    justify-content: flex-start;
+    padding: 16px;
     background-color: rgba(0, 0, 0, 0); /* Fundo totalmente transparente */
-    width: 100%;
 }
 
 .container .logo {
-    display: flex;
+    width: 20%;
     background-color: rgba(0, 0, 0, 0); /* Fundo totalmente transparente */
-    width: 10%;
-    padding: 16px ;
-    justify-content: center;
+    display: flex;
+    padding: 16px;
+    align-items: center;
 }
 
-.container .titulo_navegador{
-    display: flex;
+.container .titulo{
     background-color: rgba(0, 0, 0, 0); /* Fundo totalmente transparente */
-    width: 90%;
+    display: flex;
     padding: 16px;
     justify-content: flex-start;
     align-items: center;
@@ -27,3 +30,44 @@ body {
     color: var(--cor-primaria);
 }
 
+.container_navegador {
+    background-color: rgba(0, 0, 0, 0);
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 16px;
+}
+
+.navegador {
+    background-color: rgba(0, 0, 0, 0);
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    justify-content: space-evenly;
+}
+
+.navegador ul {
+    background-color: rgba(0, 0, 0, 0);
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    padding: 16px;
+    gap: 20px;
+}
+
+.navegador li{
+    background-color: rgba(0, 0, 0, 0);
+    display: flex;
+    align-items: center;
+}
+
+.navegador a {
+    text-decoration: none;
+    color: var(--cor-secundaria);
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navegador a:hover {
+    color: var(--cor-primaria);
+}
