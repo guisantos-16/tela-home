@@ -1,26 +1,45 @@
-body {
-    background-image: url('https://wallpaper.forfun.com/fetch/8b/8b29f499a2564a8cb43e1877bba4da47.jpeg');
-    display:flex;
-    justify-content: space-between;
+html, body {
+    height: 100%;
+    margin: 0; 
 }
 
-.container{
-    width: 50%;
+body {
+    background-image: url('https://wallpaper.forfun.com/fetch/8b/8b29f499a2564a8cb43e1877bba4da47.jpeg');
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    flex-direction: column; 
+}
+
+.container {
+    width: 100%;
+    height: 20%;
     display: flex;
     justify-content: flex-start;
     padding: 16px;
-    background-color: rgba(0, 0, 0, 0); /* Fundo totalmente transparente */
+    background-color: rgba(0, 0, 0, 0); 
 }
 
 .container .logo {
+    flex: 0 1 150px;
     width: 20%;
-    background-color: rgba(0, 0, 0, 0); /* Fundo totalmente transparente */
+    background-color: rgba(0, 0, 0, 0); 
     display: flex;
     padding: 16px;
     align-items: center;
+    justify-content: center;
 }
 
-.container .titulo{
+/* Logo responsiva */
+.container .logo img{
+    max-width: 100%;
+    height: auto;
+    max-height: 60%;
+}
+
+/* Título */
+.container .titulo {
+    flex: 1;
     background-color: rgba(0, 0, 0, 0); /* Fundo totalmente transparente */
     display: flex;
     padding: 16px;
@@ -30,14 +49,19 @@ body {
     color: var(--cor-primaria);
 }
 
+/* Barra de navegação */
 .container_navegador {
     background-color: rgba(0, 0, 0, 0);
+    position: absolute; /* Faz a navegação sair do fluxo normal do documento */
+    top: 0; /* Coloca no topo da tela */
+    right: 0; /* Coloca à direita da tela */
     width: 50%;
     display: flex;
     justify-content: flex-end;
     padding: 16px;
 }
 
+/* Navegação */
 .navegador {
     background-color: rgba(0, 0, 0, 0);
     display: flex;
@@ -46,21 +70,24 @@ body {
     justify-content: space-evenly;
 }
 
+/* Lista de navegação */
 .navegador ul {
     background-color: rgba(0, 0, 0, 0);
     display: flex;
     flex-direction: row;
     list-style: none;
     padding: 16px;
-    gap: 20px;
+    gap: 40px;
 }
 
-.navegador li{
+/* Itens de navegação */
+.navegador li {
     background-color: rgba(0, 0, 0, 0);
     display: flex;
     align-items: center;
 }
 
+/* Links da navegação */
 .navegador a {
     text-decoration: none;
     color: var(--cor-secundaria);
@@ -71,3 +98,98 @@ body {
 .navegador a:hover {
     color: var(--cor-primaria);
 }
+
+main {
+    background-color: rgba(0, 0, 0, 0);
+    height: 100%;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5%;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+}
+
+.descricao{
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.descricao h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    margin-top: 5%;
+    color: var(--cor-terciaria);
+    font-family: var(--font-heading);
+}
+
+.descricao span{
+    color: var(--cor-primaria);
+}
+
+.descricao p{
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family: var(--font-family);
+    color: var(--cor-terciaria);
+    margin-top: 5%;
+    width: 60%;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.botao{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15%;
+  }
+  
+.botao a{
+    display: block;
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+    font-family: sans-serif;
+    text-decoration: none;
+    color: var(--cor-secundaria);
+    border: 2px solid var(--cor-secundaria);
+    letter-spacing: 2px;
+    text-align: center;
+    position: relative;
+    transition: all .35s;
+  }
+  
+.botao a span{
+    position: relative;
+    z-index: 2;
+  }
+  
+.botao a:after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--cor-secundaria);
+    transition: all .35s;
+  }
+  
+.botao a:hover{
+    color: var(--cor-cinco);
+  }
+  
+.botao a:hover:after{
+    width: 100%;
+  }
