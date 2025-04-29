@@ -47,7 +47,7 @@
 
     .navegador a {
         font-size: 1.6rem; /* Aumenta o tamanho da fonte dos links */
-        padding: 8px 16px; /* Aumenta o padding dos links */
+        padding: 5px;
     }
 
     /* Logo responsiva */
